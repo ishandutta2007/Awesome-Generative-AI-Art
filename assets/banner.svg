@@ -36,13 +36,21 @@
       <stop offset="100%" stop-color="#ec4899" stop-opacity="0.5" />
     </linearGradient>
 
-    <!-- Drop Shadows & Filters -->
-    <filter id="glow-blur" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="35" result="blur" />
+    <!-- Standard SVG 1.1 Compliant Drop Shadow Filter -->
+    <filter id="shadow-title" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" />
+      <feOffset dx="0" dy="6" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.8" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
     </filter>
 
-    <filter id="shadow-title" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.8" />
+    <filter id="glow-blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30" />
     </filter>
 
     <!-- Grid Pattern -->
@@ -82,8 +90,8 @@
     }
 
     @keyframes starTwinkle {
-      0%, 100% { opacity: 0.2; transform: scale(0.8); }
-      50% { opacity: 0.9; transform: scale(1.2); }
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.9; }
     }
 
     .orb-1 { animation: pulseOrb 8s ease-in-out infinite; transform-origin: 220px 180px; }
@@ -158,7 +166,7 @@
 
   <!-- FOREGROUND LAYER: Content Protected with High-Contrast Backdrop -->
   <!-- Center Plate for Guaranteed Readability & Foreground Primacy -->
-  <rect x="220" y="85" width="760" height="235" rx="24" fill="#070a14" fill-opacity="0.7" stroke="url(#border-grad)" stroke-width="1.5" filter="url(#shadow-title)" />
+  <rect x="220" y="85" width="760" height="235" rx="24" fill="#070a14" fill-opacity="0.75" stroke="url(#border-grad)" stroke-width="1.5" filter="url(#shadow-title)" />
 
   <g id="foreground-content" text-anchor="middle">
     <!-- Top Mini Eyebrow / Tag -->
@@ -179,11 +187,11 @@
     <!-- Bottom Feature Highlights / Capabilities -->
     <text x="600" y="280" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">
       <tspan fill="#38bdf8">⚡ Midjourney &amp; Firefly</tspan>
-      <tspan fill="#64748b"> &bull; </tspan>
+      <tspan fill="#64748b"> &#8226; </tspan>
       <tspan fill="#a855f7">🎨 ComfyUI Workflows</tspan>
-      <tspan fill="#64748b"> &bull; </tspan>
+      <tspan fill="#64748b"> &#8226; </tspan>
       <tspan fill="#ec4899">🔥 FLUX.1 &amp; SDXL</tspan>
-      <tspan fill="#64748b"> &bull; </tspan>
+      <tspan fill="#64748b"> &#8226; </tspan>
       <tspan fill="#38bdf8">💻 Self-Hosted Local GPUs</tspan>
     </text>
   </g>
