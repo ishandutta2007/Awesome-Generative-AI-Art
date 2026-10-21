@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="auto">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a14" />
+      <stop offset="50%" stop-color="#0f1629" />
+      <stop offset="100%" stop-color="#090d1a" />
+    </linearGradient>
+
+    <linearGradient id="neon-cyan-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#4facfe" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="40%" stop-color="#818cf8" />
+      <stop offset="80%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="glow-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="glow-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Drop Shadows & Filters -->
+    <filter id="glow-blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="35" result="blur" />
+    </filter>
+
+    <filter id="shadow-title" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.8" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.07" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+      50% { transform: scale(1.15) translate(15px, -10px); opacity: 0.6; }
+      100% { transform: scale(1) translate(0, 0); opacity: 0.35; }
+    }
+
+    @keyframes pulseOrbAlt {
+      0% { transform: scale(1.1) translate(0, 0); opacity: 0.4; }
+      50% { transform: scale(0.9) translate(-15px, 12px); opacity: 0.65; }
+      100% { transform: scale(1.1) translate(0, 0); opacity: 0.4; }
+    }
+
+    @keyframes flowDash {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    @keyframes floatPillSlow {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes floatPillFast {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-11px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes starTwinkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 0.9; transform: scale(1.2); }
+    }
+
+    .orb-1 { animation: pulseOrb 8s ease-in-out infinite; transform-origin: 220px 180px; }
+    .orb-2 { animation: pulseOrbAlt 10s ease-in-out infinite; transform-origin: 980px 220px; }
+    .flow-line-1 { animation: flowDash 20s linear infinite; stroke-dasharray: 12, 12; }
+    .flow-line-2 { animation: flowDash 14s linear infinite; stroke-dasharray: 8, 8; }
+    .pill-anim-1 { animation: floatPillSlow 5s ease-in-out infinite; }
+    .pill-anim-2 { animation: floatPillFast 6s ease-in-out infinite 1s; }
+    .pill-anim-3 { animation: floatPillSlow 7s ease-in-out infinite 0.5s; }
+    .pill-anim-4 { animation: floatPillFast 5.5s ease-in-out infinite 1.5s; }
+    .twinkle-1 { animation: starTwinkle 3s ease-in-out infinite; }
+    .twinkle-2 { animation: starTwinkle 4s ease-in-out infinite 1s; }
+    .twinkle-3 { animation: starTwinkle 3.5s ease-in-out infinite 2s; }
+  </style>
+
+  <!-- Canvas Card Base -->
+  <rect x="0" y="0" width="1200" height="420" rx="20" fill="url(#bg-grad)" />
+  <rect x="0" y="0" width="1200" height="420" rx="20" fill="url(#grid)" />
+
+  <!-- Dynamic Animated Glow Orbs in Deep Background -->
+  <g id="dynamic-glows">
+    <circle class="orb-1" cx="220" cy="180" r="160" fill="url(#glow-grad-1)" filter="url(#glow-blur)" />
+    <circle class="orb-2" cx="980" cy="220" r="180" fill="url(#glow-grad-2)" filter="url(#glow-blur)" />
+    <circle class="orb-1" cx="600" cy="380" r="130" fill="url(#glow-grad-1)" filter="url(#glow-blur)" opacity="0.3" />
+  </g>
+
+  <!-- Flowing Dynamic Vector Neural Lines (Background Layer) -->
+  <g id="animated-paths" opacity="0.45">
+    <path class="flow-line-1" d="M-50,300 C 250,150 400,380 750,230 C 950,140 1080,260 1250,170" fill="none" stroke="url(#neon-cyan-purple)" stroke-width="2.5" />
+    <path class="flow-line-2" d="M-50,120 C 300,260 550,60 850,220 C 1050,320 1150,180 1250,290" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.5" />
+  </g>
+
+  <!-- Twinkling Micro-Nodes in Background -->
+  <g id="twinkling-nodes">
+    <circle class="twinkle-1" cx="150" cy="90" r="3" fill="#38bdf8" />
+    <circle class="twinkle-2" cx="280" cy="330" r="2.5" fill="#c084fc" />
+    <circle class="twinkle-3" cx="1040" cy="110" r="3.5" fill="#38bdf8" />
+    <circle class="twinkle-1" cx="920" cy="340" r="2.5" fill="#f472b6" />
+    <circle class="twinkle-2" cx="600" cy="60" r="3" fill="#818cf8" />
+  </g>
+
+  <!-- Subtle Floating Accent Badges (Side Floating Ecosystem Cards) -->
+  <g id="floating-cards" opacity="0.75">
+    <!-- Left Top Pill -->
+    <g class="pill-anim-1" transform="translate(80, 50)">
+      <rect width="145" height="34" rx="17" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.45" />
+      <circle cx="20" cy="17" r="5" fill="#38bdf8" />
+      <text x="35" y="22" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">FLUX.1 &amp; SDXL</text>
+    </g>
+
+    <!-- Left Bottom Pill -->
+    <g class="pill-anim-2" transform="translate(60, 320)">
+      <rect width="140" height="34" rx="17" fill="#0f172a" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.45" />
+      <circle cx="20" cy="17" r="5" fill="#a855f7" />
+      <text x="35" y="22" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">ComfyUI Nodes</text>
+    </g>
+
+    <!-- Right Top Pill -->
+    <g class="pill-anim-3" transform="translate(970, 60)">
+      <rect width="150" height="34" rx="17" fill="#0f172a" stroke="#f472b6" stroke-width="1.2" stroke-opacity="0.45" />
+      <circle cx="20" cy="17" r="5" fill="#f472b6" />
+      <text x="35" y="22" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">Text-to-Image</text>
+    </g>
+
+    <!-- Right Bottom Pill -->
+    <g class="pill-anim-4" transform="translate(980, 315)">
+      <rect width="145" height="34" rx="17" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.45" />
+      <circle cx="20" cy="17" r="5" fill="#38bdf8" />
+      <text x="35" y="22" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">Open Weights</text>
+    </g>
+  </g>
+
+  <!-- FOREGROUND LAYER: Content Protected with High-Contrast Backdrop -->
+  <!-- Center Plate for Guaranteed Readability & Foreground Primacy -->
+  <rect x="220" y="85" width="760" height="235" rx="24" fill="#070a14" fill-opacity="0.7" stroke="url(#border-grad)" stroke-width="1.5" filter="url(#shadow-title)" />
+
+  <g id="foreground-content" text-anchor="middle">
+    <!-- Top Mini Eyebrow / Tag -->
+    <rect x="475" y="112" width="250" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.6" />
+    <circle cx="493" cy="126" r="4" fill="#22c55e" />
+    <text x="606" y="130" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.5">CURATED AI ART DIRECTORY</text>
+
+    <!-- Main Title (Never obscured) -->
+    <text x="600" y="196" fill="url(#text-grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="900" letter-spacing="-0.5">
+      AWESOME GENERATIVE AI ART
+    </text>
+
+    <!-- Subtitle (Clear, readable, high contrast) -->
+    <text x="600" y="235" fill="#f1f5f9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16.5" font-weight="500">
+      State-of-the-Art SaaS Platforms &amp; Open-Source Diffusion Ecosystems
+    </text>
+
+    <!-- Bottom Feature Highlights / Capabilities -->
+    <text x="600" y="280" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">
+      <tspan fill="#38bdf8">⚡ Midjourney &amp; Firefly</tspan>
+      <tspan fill="#64748b"> &bull; </tspan>
+      <tspan fill="#a855f7">🎨 ComfyUI Workflows</tspan>
+      <tspan fill="#64748b"> &bull; </tspan>
+      <tspan fill="#ec4899">🔥 FLUX.1 &amp; SDXL</tspan>
+      <tspan fill="#64748b"> &bull; </tspan>
+      <tspan fill="#38bdf8">💻 Self-Hosted Local GPUs</tspan>
+    </text>
+  </g>
+
+  <!-- Outer Border Frame -->
+  <rect x="1" y="1" width="1198" height="418" rx="19" fill="none" stroke="url(#border-grad)" stroke-width="1.8" />
+</svg>

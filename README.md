@@ -1,217 +1,219 @@
-# Awesome-Generative-AI-Art
-
-## Top Generative AI Art Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Text-to-Image Generation, Local Diffusion Workflows & Self-Hosted Creative Pipelines*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Generative AI Art**. These tools enable creators to generate images from text prompts, edit existing images, train custom styles, and run entire creative pipelines locally—without per-image API costs or cloud dependency.
-
-
-
-**Examples** include Midjourney, DALL-E 3, Adobe Firefly, Leonardo.ai, Ideogram, Recraft, NightCafe, Stable Diffusion (SDXL/FLUX), ComfyUI, and Automatic1111 (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, custom model training, and transparent generation pipelines—ideal for artists who need full control, studios avoiding per-image costs, and researchers exploring diffusion architectures. The open-source landscape is anchored by **ComfyUI** (node-based workflow standard), **Automatic1111** (the classic web UI), **InvokeAI** (professional creative engine), **Fooocus** (Midjourney-like simplicity), and the foundational models **FLUX.1** and **SDXL** that power them.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Midjourney](https://www.midjourney.com/)**  
-
-  The aesthetic ceiling for stylized, painterly, and cinematic output. Accessible via Discord and web interface. Paid plans only (starting ~$10/month), with no free tier. Proprietary model with no local deployment option .
-
-
-
-- **[DALL-E 3 (OpenAI)](https://openai.com/dall-e-3)**  
-
-  OpenAI's text-to-image model integrated into ChatGPT. Strong prompt understanding and conversational editing—you can refine images through dialogue. Weaker on typography and text rendering. Requires ChatGPT Plus subscription ($20/month) or API credits .
-
-
-
-- **[Adobe Firefly](https://www.adobe.com/products/firefly.html)**  
-
-  The enterprise-safe option: trained exclusively on Adobe Stock and licensed content, with commercial-use indemnification. Integrated directly into Photoshop (Generative Fill, Expand) and Illustrator. Quality competitive on stock-style imagery but lags Midjourney/FLUX on dramatic, stylized work. Included in Creative Cloud subscriptions .
-
-
-
-- **[Leonardo.ai](https://leonardo.ai/)**  
-
-  Game asset generation specialist. Curated models (Phoenix, Anime XL, Lightning XL) produce consistent, game-usable output for character sheets, weapon concepts, and environment tiles. Generous free tier (150 credits/day). Paid plans from $12/month with a usable API .
-
-
-
-- **[Ideogram](https://ideogram.ai/)**  
-
-  Best-in-class text rendering within images. Ideal for posters, logos, and typography-heavy designs. Paid plans start at ~$7/month. Ranked highly on open-weight leaderboards for text accuracy .
-
-
-
-- **[Recraft](https://www.recraft.ai/)**  
-
-  Vector art and brand consistency specialist. Generates SVG output and maintains style coherence across assets—a category of its own for design systems and brand identity work. Starting at $12/month .
-
-
-
-- **[NightCafe](https://creator.nightcafe.app/)**  
-
-  Community-first platform running multiple models (FLUX, SDXL, DALL-E 3, Ideogram) under one interface. Daily challenges and social features make it the best on-ramp for beginners. Free daily credits; paid plans from $6/month .
-
-
-
-- **[Krea](https://www.krea.ai/)**  
-
-  Real-time generation canvas aggregating FLUX, Stable Diffusion 3.5, Ideogram, and Krea-1. The image updates as you sketch or type—best for iterative exploration where you "know it when you see it." Starting at $10/month .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[ComfyUI](https://github.com/comfyanonymous/ComfyUI)**  
-
-  The most powerful modular diffusion GUI and backend. Node-based graph interface where you wire together models, samplers, ControlNet, upscalers, and custom nodes into complete workflows. **The de facto standard for advanced users**—nearly every new technique (FLUX, SDXL, video models) gets ComfyUI support first. Supports FLUX.1, SDXL, SD 1.5, and modern video diffusion models. GPL-3.0 licensed. Best for users who want maximum control and reproducible pipelines .
-
-
-
-- **[Automatic1111 (Stable Diffusion WebUI)](https://github.com/AUTOMATIC1111/stable-diffusion-webui)**  
-
-  The classic Gradio-based web interface that brought Stable Diffusion to the masses. Simple text-to-image, img2img, inpainting, and extension ecosystem. **Ecosystem is aging**: development has slowed, and many users are migrating to Forge (an optimized fork) or ComfyUI. Best for beginners who want a familiar, straightforward interface without node graphs .
-
-
-
-- **[InvokeAI](https://github.com/invoke-ai/InvokeAI)**  
-
-  Professional creative engine with a polished canvas-based interface. Unified canvas for inpainting, outpainting, and regional prompts. Strong model management and a clean workflow. Positioned for artists who want power without ComfyUI's node complexity. Best for professional creative work requiring precise regional control .
-
-
-
-- **[Fooocus](https://github.com/lllyasviel/Fooocus)**  
-
-  A rethinking of Stable Diffusion with Midjourney's design philosophy: minimal configuration, good defaults, and focus on prompting. No complex settings—just type and generate. SDXL-based. Best for users who want Midjourney-like simplicity locally without node graphs or endless parameters .
-
-
-
-- **[Stable Diffusion WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)**  
-
-  An optimized fork of Automatic1111 with improved VRAM management and speed. Often runs on lower-end GPUs where the original struggles. Adds FLUX and modern model support through Forge Neo variants. Best for users who want the A1111 interface with better performance and newer model support .
-
-
-
-- **[SwarmUI](https://github.com/mcmonkeyprojects/SwarmUI)**  
-
-  Modular, high-performance web UI for image and video diffusion. Emphasis on making power tools accessible and extensible. Best for users who want a more modern, actively maintained alternative to A1111 with better performance characteristics .
-
-
-
-- **[Diffusers (Hugging Face)](https://github.com/huggingface/diffusers)**  
-
-  The official library for diffusion pipelines in PyTorch. State-of-the-art implementations for image, video, and audio generation. Essential for developers building custom pipelines or fine-tuning workflows. Best for Python developers who need programmatic control over diffusion models .
-
-
-
-### Foundational Open-Weight Models
-
-
-
-- **[FLUX.1](https://github.com/black-forest-labs/flux)**  
-
-  Black Forest Labs' model family—**the photorealism and prompt adherence standard** for open weights. FLUX.1 [dev] offers high quality for complex prompts, text rendering, and detail; [schnell] is the 4-step distilled speed variant. **VRAM requirements**: ~24GB for FP16, ~12GB for FP8, ~8GB for GGUF Q4 (practical floor). Apache 2.0 for [schnell]; [dev] has non-commercial weights but commercial usage via authorized platforms .
-
-
-
-- **[Stable Diffusion XL (SDXL)](https://github.com/Stability-AI/generative-models)**  
-
-  The ecosystem workhorse. Massive library of community fine-tunes and LoRAs, broad ControlNet compatibility, and lower VRAM requirements (~8GB FP16). Weak on text rendering but unmatched for style diversity and community tooling. Best for users who want the widest selection of community models and styles .
-
-
-
-- **[GLM-Image](https://github.com/zai-org/GLM-Image)**  
-
-  MIT-licensed ~16B parameter model with a dedicated Glyph Encoder for text rendering. Scores 91.16% on CVTG-2K for in-image text accuracy—the best verified benchmark for poster, label, and signage generation. Requires ~12GB VRAM. Smaller ecosystem than SD/FLUX but the most permissive license for text-heavy work .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **IOPaint / Lama Cleaner** — Open-source inpainting and object removal tools. Best for cleaning up generated images or removing unwanted elements .
-
-- **Real-ESRGAN** — Practical AI upscaler commonly paired with Stable Diffusion outputs. Best for increasing resolution without losing detail .
-
-- **ControlNet** — Spatial conditioning for diffusion models (pose, depth, edges). Essential for precise composition control .
-
-- **kohya_ss / OneTrainer** — Training GUIs for LoRA and DreamBooth. Best for creating custom styles or character consistency .
-
-- **Frameworks for building custom systems**: Use **ComfyUI** as the workflow backbone, **FLUX.1** or **SDXL** as the base model depending on text vs. style needs, **ControlNet** for composition, and **Real-ESRGAN** for upscaling. For programmatic pipelines, use **Diffusers** with **FLUX** or **SDXL** checkpoints. Train custom styles with **kohya_ss**.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- "Open-source" for image models means **open weights**—training data and code are rarely released in full. License terms vary significantly: Apache 2.0 (FLUX schnell, GLM-Image) allows commercial use; FLUX dev weights are non-commercial without platform licensing; SDXL uses CreativeML OpenRAIL .
-
-- Local generation requires adequate GPU VRAM (8GB minimum for quantized models, 12–24GB for full quality) and involves setup time that hosted services eliminate.
-
-- **ArtCraft** (storytold/artcraft) is a creative application suite, not a generative image model—it's a different category from the tools listed here .
-
-
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Generative AI Art - Curated Directory of SaaS and Open-Source Ecosystems" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Generative-AI-Art/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Generative-AI-Art?style=social&color=white" alt="Repo Stars"></a>
+  <a href="https://github.com/sindresorhus/awesome"><img src="https://img.shields.io/badge/Awesome-Curated_List-fc60a8?style=flat-square&logo=awesomelists" alt="Awesome List"></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Generative-AI-Art/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License: MIT"></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Generative-AI-Art/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a>
+  <img src="https://img.shields.io/badge/Updated-October_2026-blueviolet.svg?style=flat-square" alt="Last Updated">
+</p>
+
+<p align="center">
+  <b>A curated, SEO-indexed directory of leading commercial SaaS platforms and high-performance open-source GitHub projects for Generative AI Art, Diffusion Workflows, and Neural Image Generation.</b>
+</p>
 
 ---
 
+## Table of Contents
 
+- [Overview](#overview)
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [Leading SaaS & Hosted Platforms](#leading-saas--hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+  - [Web User Interfaces & Creative Suites](#web-user-interfaces--creative-suites)
+  - [Foundational Open-Weight Diffusion Models](#foundational-open-weight-diffusion-models)
+  - [Conditioning, Inpainting, Upscaling & Training Tools](#conditioning-inpainting-upscaling--training-tools)
+- [Ecosystem Architecture & Pipeline Guide](#ecosystem-architecture--pipeline-guide)
+- [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer & Licensing](#disclaimer--licensing)
 
-**Made for digital artists, creative technologists, game developers, and anyone building generative art pipelines without per-image API bills.**  
+---
 
-Let's make generative AI art more open, controllable, and accessible.
+## Overview
+
+Generative AI Art has evolved from experimental research into mission-critical creative infrastructure for concept artists, game studios, visual designers, and developers. This repository tracks both ends of the spectrum:
+
+1. **Enterprise & Prosumer SaaS Platforms**: Turnkey cloud systems with proprietary model weights, curated prompt engines, rapid iteration canvases, and commercial indemnification.
+2. **Open-Source & Self-Hosted Toolchains**: Open-weight diffusion models, modular node graphs, local web UIs, and low-rank adaptation (LoRA) fine-tuning tools that run on consumer and workstation GPUs without per-image billing or cloud dependencies.
+
+---
+
+## Sector Overview & Market Dynamics
+
+The global market for Generative AI in visual media, digital art, and creative design is estimated at **$2.1 billion in 2024–2025** and is projected to expand to **$13.8 billion by 2032**, demonstrating an annualized compound growth rate (CAGR) of ~31.5%.
+
+Rather than a winner-take-all monopoly, the sector exhibits **moderate fragmentation**:
+- **Frontier Cloud Concentration**: Upstream foundational compute and closed-source model checkpoints remain concentrated among deep-pocketed hyperscalers and labs (Adobe, OpenAI, Midjourney).
+- **Application & Open Ecosystem Dispersion**: Downstream visual tooling remains fiercely competitive and differentiated. Open-weight breakthroughs (FLUX.1, SDXL) coupled with modular graphical orchestrators (ComfyUI) allow independent developers, game studios, and specialized SaaS apps (Recraft for vectors, Ideogram for typography, Leonardo for game assets) to circumvent vendor lock-in.
+
+---
+
+## Leading SaaS & Hosted Platforms
+
+The table below catalogs commercial text-to-image and generative visual suites, sorted in descending order by parent company scale (valuation or market capitalization):
+
+| Platform | Company Valuation / Revenue | Pricing (Starting Paid Tier) | Free Tier Limits | Core Focus & Best Use Cases |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Adobe Firefly](https://www.adobe.com/products/firefly.html)** | **~$230B Market Cap** (~$24B ARR) | **$4.99 / month** (Firefly Premium Plan for 100 credits/mo; or included in Photoshop/Creative Cloud plans from $9.99/mo) | **25 generative credits/month** with free Adobe ID (resets monthly; non-commercial license, watermarked downloads, standard queue speed) | Enterprise IP indemnity; native integration inside Adobe Photoshop (Generative Fill, Generative Expand) and Illustrator vector recoloring. |
+| **[DALL-E 3 (OpenAI)](https://openai.com/dall-e-3)** | **~$157B Valuation** (~$4B+ ARR) | **$20.00 / month** (ChatGPT Plus plan with multimodal GPT-4o & DALL-E 3; or API at $0.040–$0.080/image) | **2 image generations per 24 hours** on ChatGPT Free tier (resets on rolling 24-hr window; standard 1024x1024 resolution) | Unrivaled conversational prompt adherence; complex spatial composition and contextual image revisions through natural dialogue. |
+| **[Leonardo.ai](https://leonardo.ai/)** | **~$38B Valuation** (Acquired by Canva; ~$2.5B ARR) | **$12.00 / month** ($10.00/mo billed annually on Apprentice Plan for 8,500 fast tokens/mo) | **150 fast generation tokens per day** (resets every 24 hours; generates ~15–75 images/day based on pipeline, standard queue access) | Game asset generation, character model sheets, environment textures, built-in LoRA training, and Canvas inpainting/outpainting. |
+| **[Midjourney](https://www.midjourney.com/)** | **~$10B Valuation** (~$500M ARR; Bootstrapped) | **$10.00 / month** ($8.00/mo billed annually on Basic Plan for 3.3 hrs/mo Fast GPU time, ~200 generations) | **No ongoing free tier**; requires minimum $10/mo subscription (occasional promotional weekend access periods or legacy 25-trial jobs) | Gold standard for cinematic aesthetics, photorealism, artistic style rendering, lighting fidelity, and prompt elegance via Discord & Web. |
+| **[Ideogram](https://ideogram.ai/)** | **~$500M–$600M Valuation** (Series A; a16z backed) | **$8.00 / month** ($7.00/mo billed annually on Basic Plan for 400 priority prompt credits / ~1,600 images/mo) | **10 slow credits per day** (resets daily at 00:00 UTC; yields up to 40 images/day with public gallery publishing and standard queue) | Best-in-class in-image typography, legible signage, t-shirt graphics, typography posters, and graphic design sticker creation. |
+| **[Krea AI](https://www.krea.ai/)** | **~$500M Valuation** ($83M Series B; ~$10M ARR) | **$10.00 / month** ($8.00/mo billed annually on Basic Plan for 100 fast daily generations + real-time canvas) | **100 compute units per day** (resets every 24 hours; yields ~10–15 real-time canvas generations/day, standard generation queue) | Ultra-low-latency real-time canvas (generates as you brush/draw), AI upscaling, style transfer, and real-time interactive generation. |
+| **[Recraft](https://www.recraft.ai/)** | **~$120M Valuation** (Series B; Accel backed) | **$12.00 / month** ($10.00/mo billed annually on Basic Plan for 1,000 credits/mo) | **50 free credits per day** (resets daily; provides ~50 raster/vector generations/day, public gallery, commercial usage permitted) | Native infinite-resolution SVG vector art generation, brand consistency, icon design sets, and graphic design style boards. |
+| **[NightCafe Studio](https://creator.nightcafe.app/)** | **~$15M–$25M Valuation** (Profitable; 25M+ users) | **$5.99 / month** ($4.79/mo billed annually on AI Beginner for 100 credits/mo + daily credits) | **5 free credits per day** upon login + **2 bonus credits per day** for voting in daily challenge (total 7 credits/day; standard SD models free) | Multi-model playground aggregating FLUX, SDXL, and DALL-E 3 with gamified daily community art challenges and collaborative rooms. |
+
+---
+
+## Open-Source GitHub Projects
+
+The open-source generative AI art ecosystem enables local GPU execution without subscription costs or platform censorship. The projects below are **strictly sorted in descending order by GitHub stargazers count**, with dynamic social badges linking directly to each repository's stargazers.
+
+### Web User Interfaces & Creative Suites
+
+1. **[AUTOMATIC1111 / stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)** [![Stars](https://img.shields.io/github/stars/AUTOMATIC1111/stable-diffusion-webui?style=social&color=white)](https://github.com/AUTOMATIC1111/stable-diffusion-webui/stargazers)  
+   The pioneer browser-based interface for Stable Diffusion. Features an extensive ecosystem of community extensions, checkpoint management, prompt matrices, inpainting, outpainting, textual inversion, and scripts.  
+   - **Best for:** Beginners and users seeking an all-in-one classic tabbed UI with rich community extension support.
+
+2. **[comfyanonymous / ComfyUI](https://github.com/comfyanonymous/ComfyUI)** [![Stars](https://img.shields.io/github/stars/comfyanonymous/ComfyUI?style=social&color=white)](https://github.com/comfyanonymous/ComfyUI/stargazers)  
+   The industry standard node-based visual programming interface and execution backend for diffusion models. Wires checkpoints, VAEs, samplers, LoRAs, and ControlNets into fully reproducible graph pipelines.  
+   - **Best for:** Advanced workflows, production pipelines, video diffusion, and immediate day-zero support for newly released architectures (FLUX, SDXL, SD 3.5).
+
+3. **[lllyasviel / Fooocus](https://github.com/lllyasviel/Fooocus)** [![Stars](https://img.shields.io/github/stars/lllyasviel/Fooocus?style=social&color=white)](https://github.com/lllyasviel/Fooocus/stargazers)  
+   An image generating software based on SDXL that combines the prompt simplicity of Midjourney with the local independence of open weights. Automates sampling parameters, prompt expansion, and style presets behind an effortless interface.  
+   - **Best for:** Casual creators who want Midjourney-level quality locally without adjusting technical hyperparameters.
+
+4. **[invoke-ai / InvokeAI](https://github.com/invoke-ai/InvokeAI)** [![Stars](https://img.shields.io/github/stars/invoke-ai/InvokeAI?style=social&color=white)](https://github.com/invoke-ai/InvokeAI/stargazers)  
+   A creative engine designed for visual artists and design studios. Offers an industry-grade Unified Canvas for multi-layer composition, regional prompting, precise inpainting, and structured asset boards.  
+   - **Best for:** Professional digital artists and illustrators needing fine-grained canvas editing without node complexity.
+
+5. **[lllyasviel / stable-diffusion-webui-forge](https://github.com/lllyasviel/stable-diffusion-webui-forge)** [![Stars](https://img.shields.io/github/stars/lllyasviel/stable-diffusion-webui-forge?style=social&color=white)](https://github.com/lllyasviel/stable-diffusion-webui-forge/stargazers)  
+   A high-performance fork of Automatic1111 featuring rewritten attention mechanisms, optimized layer management, and significant VRAM reduction. Natively runs FLUX.1 and SDXL on low-to-mid tier consumer GPUs.  
+   - **Best for:** Users who love the classic WebUI layout but require modern speed optimizations and FLUX/SDXL compatibility on modest hardware.
+
+6. **[Acly / krita-ai-diffusion](https://github.com/Acly/krita-ai-diffusion)** [![Stars](https://img.shields.io/github/stars/Acly/krita-ai-diffusion?style=social&color=white)](https://github.com/Acly/krita-ai-diffusion/stargazers)  
+   Native generative AI plugin for the open-source Krita digital painting suite. Delivers real-time canvas generation, inpainting, ControlNet guidance, and layer-aware style generation directly within an artist's digital brush workflow.  
+   - **Best for:** Illustrators and concept artists blending manual digital painting with AI generation.
+
+7. **[easydiffusion / easydiffusion](https://github.com/easydiffusion/easydiffusion)** [![Stars](https://img.shields.io/github/stars/easydiffusion/easydiffusion?style=social&color=white)](https://github.com/easydiffusion/easydiffusion/stargazers)  
+   Zero-hassle, 1-click installer and user-friendly GUI for running Stable Diffusion locally on Windows, macOS, and Linux without Python or CUDA command-line configuration.  
+   - **Best for:** Non-technical creators wanting an instant local install experience.
+
+8. **[mcmonkeyprojects / SwarmUI](https://github.com/mcmonkeyprojects/SwarmUI)** [![Stars](https://img.shields.io/github/stars/mcmonkeyprojects/SwarmUI?style=social&color=white)](https://github.com/mcmonkeyprojects/SwarmUI/stargazers)  
+   Modular, fast, and extensible web interface for image and video diffusion powered by a ComfyUI backend. Features batch queuing, multi-GPU generation swarms, and a rich parameter control dashboard.  
+   - **Best for:** Power users and studio teams orchestrating multi-GPU rendering swarms.
+
+---
+
+### Foundational Open-Weight Diffusion Models
+
+1. **[CompVis / stable-diffusion](https://github.com/CompVis/stable-diffusion)** [![Stars](https://img.shields.io/github/stars/CompVis/stable-diffusion?style=social&color=white)](https://github.com/CompVis/stable-diffusion/stargazers)  
+   The landmark latent text-to-image diffusion model developed by CompVis, LMU Munich, and Runway that democratized generative AI art. Forms the foundation for the SD 1.4/1.5 ecosystem.  
+   - **License:** CreativeML OpenRAIL-M.
+
+2. **[Stability-AI / generative-models (SDXL)](https://github.com/Stability-AI/generative-models)** [![Stars](https://img.shields.io/github/stars/Stability-AI/generative-models?style=social&color=white)](https://github.com/Stability-AI/generative-models/stargazers)  
+   Official codebase for Stable Diffusion XL (SDXL 1.0) and Stable Video Diffusion (SVD). SDXL features a 3.5B dual-text-encoder architecture that serves as the backbone for thousands of community-trained art checkpoints and LoRAs.  
+   - **License:** OpenRAIL++ (Commercial use allowed with conditions).
+
+3. **[black-forest-labs / flux](https://github.com/black-forest-labs/flux)** [![Stars](https://img.shields.io/github/stars/black-forest-labs/flux?style=social&color=white)](https://github.com/black-forest-labs/flux/stargazers)  
+   State-of-the-art 12-billion parameter rectified-flow transformer model developed by the original authors of Stable Diffusion. Delivers benchmark-setting photorealism, typography fidelity, and prompt comprehension. Available in `[schnell]` (4-step distilled Apache 2.0) and `[dev]` (non-commercial open-weights).  
+   - **License:** Apache 2.0 (`schnell`) / Non-Commercial (`dev`).
+
+4. **[zai-org / GLM-Image](https://github.com/zai-org/GLM-Image)** [![Stars](https://img.shields.io/github/stars/zai-org/GLM-Image?style=social&color=white)](https://github.com/zai-org/GLM-Image/stargazers)  
+   A 16-billion parameter open-weight diffusion model with a specialized Glyph Encoder dedicated to flawless text and typography rendering on banners, signage, and labels.  
+   - **License:** Permissive MIT License.
+
+---
+
+### Conditioning, Inpainting, Upscaling & Training Tools
+
+1. **[xinntao / Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)** [![Stars](https://img.shields.io/github/stars/xinntao/Real-ESRGAN?style=social&color=white)](https://github.com/xinntao/Real-ESRGAN/stargazers)  
+   Practical super-resolution and image enhancement network. Restores high-frequency textures, cleans compression artifacts, and upscales AI art outputs up to 4x–8x cleanly.  
+   - **Best for:** Preparing generated artwork for high-resolution print or poster publishing.
+
+2. **[huggingface / diffusers](https://github.com/huggingface/diffusers)** [![Stars](https://img.shields.io/github/stars/huggingface/diffusers?style=social&color=white)](https://github.com/huggingface/diffusers/stargazers)  
+   The premiere PyTorch toolbox for diffusion models across vision, audio, and video modalities. Powers most Python backend implementations and model training pipelines across the industry.  
+   - **Best for:** Developers and researchers building custom programmatic generation pipelines.
+
+3. **[lllyasviel / ControlNet](https://github.com/lllyasviel/ControlNet)** [![Stars](https://img.shields.io/github/stars/lllyasviel/ControlNet?style=social&color=white)](https://github.com/lllyasviel/ControlNet/stargazers)  
+   Neural network structure that adds spatial conditioning to text-to-image diffusion models via Canny edges, depth maps, human poses (OpenPose), normal maps, and segmentation masks.  
+   - **Best for:** Strict composition control, character pose preservation, and architectural accuracy.
+
+4. **[Sanster / IOPaint](https://github.com/Sanster/IOPaint)** [![Stars](https://img.shields.io/github/stars/Sanster/IOPaint?style=social&color=white)](https://github.com/Sanster/IOPaint/stargazers)  
+   Modern open-source inpainting, object removal, and outpainting suite (formerly known as *Lama Cleaner*). Powered by state-of-the-art inpainting models including LaMa, MAT, and Stable Diffusion Inpainting.  
+   - **Best for:** Instant object erasing, watermark removal, and background expansion.
+
+5. **[Mikubill / sd-webui-controlnet](https://github.com/Mikubill/sd-webui-controlnet)** [![Stars](https://img.shields.io/github/stars/Mikubill/sd-webui-controlnet?style=social&color=white)](https://github.com/Mikubill/sd-webui-controlnet/stargazers)  
+   Official WebUI integration for ControlNet. Enables multi-ControlNet stacks, preprocessor inspection, and real-time pose guidance inside the Automatic1111 environment.  
+   - **Best for:** A1111 users requiring compositional and structural guidance.
+
+6. **[bmaltais / kohya_ss](https://github.com/bmaltais/kohya_ss)** [![Stars](https://img.shields.io/github/stars/bmaltais/kohya_ss?style=social&color=white)](https://github.com/bmaltais/kohya_ss/stargazers)  
+   Comprehensive GUI and training suite for LoRA, LyCORIS, DreamBooth, and fine-tuning SD 1.5, SDXL, and FLUX models.  
+   - **Best for:** Creators and studios training custom art styles, consistent characters, or specific brand identities.
+
+7. **[Nerogar / OneTrainer](https://github.com/Nerogar/OneTrainer)** [![Stars](https://img.shields.io/github/stars/Nerogar/OneTrainer?style=social&color=white)](https://github.com/Nerogar/OneTrainer/stargazers)  
+   A unified, modular training tool for diffusion models featuring memory-efficient fine-tuning, customizable loss functions, and a clean graphical configuration interface.  
+   - **Best for:** Precision model tuning and multi-concept training on consumer GPUs.
+
+---
+
+## Ecosystem Architecture & Pipeline Guide
+
+To build an efficient, cost-effective creative pipeline, combine modular open-source building blocks:
+
+```mermaid
+flowchart LR
+    A["💡 Prompt / Concept"] --> B["🎛️ Workflow Engine\n(ComfyUI / SwarmUI)"]
+    B --> C["🧠 Base Model\n(FLUX.1 / SDXL)"]
+    D["📐 Composition\n(ControlNet / Depth)"] --> B
+    E["🎨 Custom Style / Identity\n(LoRA via kohya_ss)"] --> C
+    C --> F["🖼️ Raw Latent Generation"]
+    F --> G["🖌️ Inpainting & Cleanup\n(IOPaint / InvokeAI Canvas)"]
+    G --> H["🔍 Upscaler\n(Real-ESRGAN / Ultimate SD)"]
+    H --> I["🚀 High-Res Art Output\n(Print / Web / Asset)"]
+```
+
+- **Rapid Prototyping**: Use **Krea AI** or **Fooocus** for instant concept validation and zero-configuration exploration.
+- **Graphic Design & Typography**: Use **Ideogram** (cloud) or **GLM-Image** / **FLUX.1 [dev]** (local) for sharp text rendering and layout signage.
+- **Vector Branding & Iconography**: Use **Recraft** for infinite SVG vector exports and cohesive design systems.
+- **Production Asset Pipeline**: Build in **ComfyUI** with **FLUX.1** or **SDXL**, conditioned with **ControlNet** and refined via **IOPaint** and **Real-ESRGAN**.
+
+---
+
+## Frequently Asked Questions (FAQ)
+
+### 1. Which AI art generator is best for commercial use?
+- **Cloud/SaaS**: **Adobe Firefly** provides full commercial indemnification, as training data is strictly sourced from licensed Adobe Stock. **Recraft** explicitly permits commercial use of generated SVG and raster art on both free and paid plans.
+- **Open-Source**: **FLUX.1 [schnell]** is released under the permissive Apache 2.0 license. **SDXL** allows commercial exploitation under OpenRAIL++ terms, provided acceptable use guidelines are followed.
+
+### 2. What hardware specifications are required to run models locally?
+- **Entry Level (8GB VRAM)**: Can run SD 1.5, SDXL (with FP8 quantization or xFormers), and GGUF quantized variants of FLUX via **SD-WebUI Forge** or **ComfyUI**.
+- **Recommended (12GB–16GB VRAM)**: RTX 3060/4070 series allows smooth native SDXL generation, multi-ControlNet workflows, and FLUX.1 FP8 execution.
+- **Professional (24GB+ VRAM)**: RTX 3090/4090 or workstation GPUs are recommended for running unquantized FP16 FLUX.1 [dev], local model fine-tuning with **kohya_ss**, and high-resolution video diffusion pipelines.
+
+### 3. How does ComfyUI compare to Automatic1111?
+- **ComfyUI** executes as a direct acyclic graph (DAG), loading only required model components into memory, making it dramatically faster and more VRAM-efficient. It is the platform of choice for cutting-edge techniques.
+- **Automatic1111** provides a traditional web form layout that is intuitive for beginners, but lacks the granular workflow control and memory efficiency of node-based architectures.
+
+---
+
+## How to Contribute
+
+We welcome additions, corrections, and benchmark updates from the community!
+
+1. **Fork the repository** to your personal GitHub account.
+2. **Add or update entries**:
+   - For SaaS tools: ensure exact starting pricing and specific free tier limits are provided.
+   - For open-source repos: include accurate repository links, stargazers badges, and place in the star-sorted hierarchy.
+3. **Submit a Pull Request** with a concise description of your changes.
+
+---
+
+## Disclaimer & Licensing
+
+- This repository is a community-maintained index for research, creative workflows, and educational purposes.
+- All product names, trademarks, and registered trademarks belong to their respective owners.
+- "Open-source" in generative diffusion typically denotes open-weight checkpoints; review individual model licenses (Apache 2.0, OpenRAIL, Non-Commercial) before commercial deployment.
